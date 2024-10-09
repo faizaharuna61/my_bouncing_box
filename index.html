@@ -1,0 +1,48 @@
+
+     <div
+        id="my_bouncing_box"
+        style="background-color: blue; border-radius: 3px; position: absolute; left: 0px; top: 0px; min-width: 100px; min-height: 100px; text-align: center; font-weight: bold; color: #999;"
+    >
+        faizaharuna
+    </div>
+    <script type="text/javascript">
+        let box=document.getElementById('my_bouncing_box');
+        let x_origin=0;
+        let y_origin=0;
+
+        let x=1;
+        let y=1;
+
+        let w=window.innerWidth;
+        let h=window.innerHeight;
+
+      
+
+
+        setInterval(move, 0.5)
+
+        function move(){
+        box.style.left=x_origin+'px';
+        box.style.top=y_origin+'px';
+
+        if(x_origin > w){
+            x=0-x;
+        }
+        if(x_origin < 0){
+            x=0-x;
+
+        }
+        if(y_origin > h){
+            y=0-y;
+        }
+        if(y_origin < 0){
+            y=0-y;
+            
+        }
+
+        x_origin += x;
+        y_origin += y;
+        
+    }
+    </script>
+</html>
